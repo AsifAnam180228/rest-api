@@ -7,11 +7,14 @@ from rest_framework import status
 from .models import employees
 from .serializers import employeeSerializer
 # Create your views here.
-class  employeeList(APIView):
-    def get(self,request):
+"""class  employeeList(APIView):
+    def get(self, request):
         employee1 = employees.objects.all()
         serializer = employeeSerializer(employee1, many= True)
         return Response(serializer.data)
-    def post(self):
-        pass
 
+    def post(self, request):
+        employee1 = employees.objects.all()
+        serializer = employeeSerializer(employee1, many=True)
+        return Response(data= request.data)
+"""
